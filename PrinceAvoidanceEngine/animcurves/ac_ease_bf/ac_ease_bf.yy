@@ -1,0 +1,29 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"ac_ease_bf",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"In","colour":4290799884,"name":"In","points":[
+        {"th0":-0.05,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":0.0,"th1":0.24885756,"tv0":-0.0,"tv1":-0.008642018,"x":0.5,"y":0.99955463,},
+        {"th0":0.0,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"Out","colour":4281083598,"name":"Out","points":[
+        {"th0":-0.05,"th1":1.0477379E-09,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.5,"y":1.0,},
+        {"th0":-0.25,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"InOut","colour":4279025727,"name":"InOut","points":[
+        {"th0":-0.025,"th1":0.2,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.2,"th1":0.2,"tv0":0.0,"tv1":0.0,"x":0.5,"y":1.0,},
+        {"th0":-0.2,"th1":0.025,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"ac_ease_bf",
+  "parent":{
+    "name":"Tween",
+    "path":"folders/Animation Curves/Tween.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

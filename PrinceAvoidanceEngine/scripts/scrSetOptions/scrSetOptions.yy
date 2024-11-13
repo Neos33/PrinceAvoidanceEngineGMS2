@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrSetOptions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSetOptions",
+  "parent":{
+    "name":"Initialization",
+    "path":"folders/Scripts/System/Initialization.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

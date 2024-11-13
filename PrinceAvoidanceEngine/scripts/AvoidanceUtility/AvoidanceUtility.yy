@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AvoidanceUtility",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AvoidanceUtility",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

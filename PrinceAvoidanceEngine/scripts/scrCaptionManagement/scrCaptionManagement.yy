@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrCaptionManagement",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCaptionManagement",
+  "parent":{
+    "name":"Management",
+    "path":"folders/Scripts/System/Management.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

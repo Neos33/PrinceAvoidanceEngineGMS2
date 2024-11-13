@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMusicManagement",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMusicManagement",
+  "parent":{
+    "name":"Management",
+    "path":"folders/Scripts/System/Management.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

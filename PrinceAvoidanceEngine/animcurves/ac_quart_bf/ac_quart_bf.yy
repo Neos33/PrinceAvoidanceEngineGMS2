@@ -1,0 +1,29 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"ac_quart_bf",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"In","colour":4290799884,"name":"In","points":[
+        {"th0":-0.125,"th1":0.5,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":0.0,"th1":0.5,"tv0":0.0,"tv1":0.0,"x":0.5,"y":0.99999994,},
+        {"th0":0.0,"th1":0.125,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"Out","colour":4281083598,"name":"Out","points":[
+        {"th0":-0.125,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.5,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.5,"y":1.0,},
+        {"th0":-0.5,"th1":0.125,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"InOut","colour":4279025727,"name":"InOut","points":[
+        {"th0":-0.0625,"th1":0.375,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.375,"th1":0.375,"tv0":0.0,"tv1":0.0,"x":0.5,"y":1.0,},
+        {"th0":-0.375,"th1":0.0625,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"ac_quart_bf",
+  "parent":{
+    "name":"Tween",
+    "path":"folders/Animation Curves/Tween.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

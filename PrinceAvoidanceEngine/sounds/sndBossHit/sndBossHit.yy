@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndBossHit",
+  "audioGroupId":{
+    "name":"audiogroup_SFX",
+    "path":"audiogroups/audiogroup_SFX",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.307664,
+  "name":"sndBossHit",
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Sounds/SFX/Misc.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndBossHit.wav",
+  "type":1,
+  "volume":0.5,
+}
