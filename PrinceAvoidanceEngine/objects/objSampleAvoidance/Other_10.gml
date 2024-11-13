@@ -14,9 +14,9 @@ function scrImpale(duration,factor)
 	    gravity = 0.6;
 	    gravity_direction = direction + 180;
 	    speed = 20;
-	    instance_change_variable(id,"image_xscale",_factor,_duration,ac_ease);
-	    instance_change_variable(id,"image_yscale",0.5,_duration,ac_ease);
-	    instance_change_variable(id,"gravity",2,_duration,ac_expo, "In");
+	    instance_change_variable(id,"image_xscale",_factor,_duration,ac_ease, EASE_OUT);
+	    instance_change_variable(id,"image_yscale",0.5,_duration,ac_ease, EASE_OUT);
+	    instance_change_variable(id,"gravity",2,_duration,ac_expo, EASE_OUT);
 	    script_execute_delayed(scrSetKiller,_duration,true);
 	}
 }

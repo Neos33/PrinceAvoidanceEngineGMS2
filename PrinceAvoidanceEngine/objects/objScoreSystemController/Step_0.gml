@@ -43,7 +43,7 @@ if(global.currentRank>_oldRank&&instance_exists(objPlayer)){
         image_yscale=0.75;
         font=fScore;
         instance_fade_out(id,100);
-        instance_move_to(id,x,y-64,100,ac_linear, 0);
+        instance_move_to(id,x,y-64,100,ac_linear);
         str=other.rankText[global.currentRank]+ " RANK ACHIEVED! !";
     }
 }

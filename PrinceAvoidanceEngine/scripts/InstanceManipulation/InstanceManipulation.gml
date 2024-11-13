@@ -1,3 +1,4 @@
+
 /** 
 	* Change the alpha of an instance over time.
 	* 
@@ -8,7 +9,7 @@
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_linear.
 	* 
 */
-function instance_change_alpha( targetId, targetAlpha, duration, easingFunc = ac_linear, easeMode = 0 )
+function instance_change_alpha( targetId, targetAlpha, duration, easingFunc = ac_linear, easeMode = EASE_OUT )
 {
 
 
@@ -36,7 +37,7 @@ function instance_change_alpha( targetId, targetAlpha, duration, easingFunc = ac
     * @param {easingFuncID} [easingFunc] - The easing function to use. The default is tween_linear.
     * 
 */
-function instance_change_angle( targetId, targetAngle, duration, easingFunc = ac_linear, easeMode = 0 )
+function instance_change_angle( targetId, targetAngle, duration, easingFunc = ac_linear, easeMode = EASE_OUT )
 {
 	
 	with( targetId ) {
@@ -65,7 +66,7 @@ function instance_change_angle( targetId, targetAngle, duration, easingFunc = ac
     * @param {easingFuncID} [easingFunc] - The easing function to use. The default is tween_sine_inout.
     * 
 */
-function instance_morph( targetId, targetShape, targetN, duration, easingFunc = ac_ease, easeMode = "InOut")
+function instance_morph( targetId, targetShape, targetN, duration, easingFunc = ac_ease, easeMode = EASE_INOUT)
 {
 
 	with( targetId ) {
@@ -93,7 +94,7 @@ function instance_morph( targetId, targetShape, targetN, duration, easingFunc = 
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_linear.
 	* 
 */
-function instance_change_color( targetId, targetColour, duration, easingFunc = ac_linear, easeMode = 0 )
+function instance_change_color( targetId, targetColour, duration, easingFunc = ac_linear, easeMode = EASE_OUT )
 {
 	with( targetId ) {
 	    var command = instance_create_depth( x, y, depth, oRdrChangeColorCommand );
@@ -122,7 +123,7 @@ function instance_change_color( targetId, targetColour, duration, easingFunc = a
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_change_color_variable( targetId, varName, targetX, duration, easingFunc = ac_ease, easeMode = "InOut" )
+function instance_change_color_variable( targetId, varName, targetX, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
 	with( targetId ) {
 	    var command = instance_create_depth( x, y, depth, oRdrChangeColourVariableCommand );
@@ -150,7 +151,7 @@ function instance_change_color_variable( targetId, varName, targetX, duration, e
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_change_variable( targetId, varName, targetX, duration, easingFunc = ac_ease, easeMode = "InOut" )
+function instance_change_variable( targetId, varName, targetX, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
 	with( targetId ) {
 	    var command = instance_create_depth( x, y, depth, oRdrChangeVariableCommand );
@@ -180,7 +181,7 @@ function instance_change_variable( targetId, varName, targetX, duration, easingF
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_change_variable_array( targetId, varName, varIndex, targetX, duration, easingFunc = ac_ease, easeMode = "InOut" )
+function instance_change_variable_array( targetId, varName, varIndex, targetX, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
 
 
@@ -214,7 +215,7 @@ function instance_change_variable_array( targetId, varName, varIndex, targetX, d
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_change_variable_array_full( targetId, varName, targetX, duration, easingFunc = ac_ease, easeMode = "InOut" )
+function instance_change_variable_array_full( targetId, varName, targetX, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
 
 
@@ -276,7 +277,7 @@ function instance_fade_out( targetId, fadeDuration = 1)
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_move_to( targetId, targetX, targetY, duration, easingFunc = ac_ease, easeMode = "Out" )
+function instance_move_to( targetId, targetX, targetY, duration, easingFunc = ac_ease, easeMode = EASE_OUT )
 {
 	with( targetId ) {
 	    var command = instance_create_depth( x, y, depth, oRdrMoveCommand );
@@ -305,7 +306,7 @@ function instance_move_to( targetId, targetX, targetY, duration, easingFunc = ac
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_move_to_polar( targetId, pivotX, pivotY, targetRadius, targetAngle, duration, easingFunc = ac_ease, easeMode = "InOut" )
+function instance_move_to_polar( targetId, pivotX, pivotY, targetRadius, targetAngle, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
 
 
@@ -336,7 +337,7 @@ function instance_move_to_polar( targetId, pivotX, pivotY, targetRadius, targetA
 	* @param {easingFuncID} [easingFunc] - The easing function to use. The default is ac_ease.
 	* 
 */
-function instance_scale( targetId, targetScale, duration, easingFunc = ac_ease, easeMode = "InOut" )
+function instance_scale( targetId, targetScale, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
 
 

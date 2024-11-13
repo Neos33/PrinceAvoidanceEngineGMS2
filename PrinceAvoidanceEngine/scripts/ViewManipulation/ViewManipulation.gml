@@ -1,15 +1,15 @@
-function view_move_scale( targetX, targetY, targetScale, duration, easingFunc = ac_ease, easeMode = "InOut" )
+/**
+	* Simultaneously moves and scales the default view by the specified amount. The movement is relative to the current position of the view.
+	* 
+	* @param {float} targetX - the X value to move to the view by.
+	* @param {float} targetY - the Y value to move to the view by.
+	* @param {float} targetScale - the value to set the scale of the view to, where 1 corresponds to the default size of the view.
+	* @param {integer} duration - The duration of the change, in frames.
+	* @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
+	* 
+*/
+function view_move_scale( targetX, targetY, targetScale, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
-	/**
-	    * Simultaneously moves and scales the default view by the specified amount. The movement is relative to the current position of the view.
-	    * 
-	    * @param {float} targetX - the X value to move to the view by.
-	    * @param {float} targetY - the Y value to move to the view by.
-	    * @param {float} targetScale - the value to set the scale of the view to, where 1 corresponds to the default size of the view.
-	    * @param {integer} duration - The duration of the change, in frames.
-	    * @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
-	    * 
-	*/
 	
 	var cam = camera_properties(0);
 
@@ -28,18 +28,18 @@ function view_move_scale( targetX, targetY, targetScale, duration, easingFunc = 
 		command.curve_mode = easeMode;
 }
 
-function view_offset( targetX, targetY, duration, easingFunc = ac_ease, easeMode = "InOut" )
+/**
+	* Moves the default view by a specified amount over time. The movement is relative to the initial position of the view when the script is called.
+	* 
+	* @param {float} targetX - the X value to move to the view by.
+	* @param {float} targetY - the Y value to move to the view by.
+	* @param {integer} duration - The duration of the change, in frames.
+	* @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
+	* 
+*/
+function view_offset( targetX, targetY, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
-	/**
-	    * Moves the default view by a specified amount over time. The movement is relative to the initial position of the view when the script is called.
-	    * 
-	    * @param {float} targetX - the X value to move to the view by.
-	    * @param {float} targetY - the Y value to move to the view by.
-	    * @param {integer} duration - The duration of the change, in frames.
-	    * @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
-	    * 
-	*/
-	
+
 	var cam = camera_properties(0);
 
 	var command = instance_create_depth(0, 0, 0, oViewOffsetCommand );
@@ -54,17 +54,17 @@ function view_offset( targetX, targetY, duration, easingFunc = ac_ease, easeMode
 		command.curve_mode = easeMode;
 }
 
-function view_scale( targetScale, duration, easingFunc = ac_ease, easeMode = "InOut" )
+/**
+	* Sets the scale of the default view to the specified amount, over time. This is useful for "zoom in/out"-style effects.
+	* 
+	* @param {float} targetScale - the value to set the scale of the view to, where 1 corresponds to the default size of the view.
+	* @param {integer} duration - The duration of the change, in frames.
+	* @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
+	*
+*/
+function view_scale( targetScale, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
-	/**
-	    * Sets the scale of the default view to the specified amount, over time. This is useful for "zoom in/out"-style effects.
-	    * 
-	    * @param {float} targetScale - the value to set the scale of the view to, where 1 corresponds to the default size of the view.
-	    * @param {integer} duration - The duration of the change, in frames.
-	    * @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
-	    *
-	*/
-	
+
 	var cam = camera_properties(0);
 
 	var command = instance_create_depth(0, 0, 0,oViewScaleCommand );
@@ -80,13 +80,14 @@ function view_scale( targetScale, duration, easingFunc = ac_ease, easeMode = "In
 		command.curve_mode = easeMode;
 }
 
+/**
+	* Creates a screen shake effect with the specified amplitude for the specified amount of frames.
+	* @param {float} amplitude - The amplitude of the screen shake.
+	* @param {int} duration - The duration of the effect in frames.
+*/
 function view_screen_shake(amplitude, duration)
 {
-	/**
-	    * Creates a screen shake effect with the specified amplitude for the specified amount of frames.
-	    * @param {float} amplitude - The amplitude of the screen shake.
-	    * @param {int} duration - The duration of the effect in frames.
-	*/
+
 
 	var cam = camera_properties(0);
 
@@ -103,16 +104,17 @@ function view_screen_shake(amplitude, duration)
 
 }
 
-function view_rotate(targetAngle, duration, easingFunc = ac_ease, easeMode = "InOut" )
+/**
+	* Rotates the default view by a specified amount over time. The movement is relative to thie initial rotation of the view.
+	* 
+	* @param {float} targetAngle - The angle to rotate the view by.
+	* @param {integer} duration - The duration of the change, in frames.
+	* @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
+	* 
+*/
+function view_rotate(targetAngle, duration, easingFunc = ac_ease, easeMode = EASE_INOUT )
 {
-	/**
-	    * Rotates the default view by a specified amount over time. The movement is relative to thie initial rotation of the view.
-	    * 
-	    * @param {float} targetAngle - The angle to rotate the view by.
-	    * @param {integer} duration - The duration of the change, in frames.
-	    * @param {easingFuncID} easingFunc - The easing function to use. The default is tween_sine_inout.
-	    * 
-	*/
+
 	
 	var cam_get_angle = camera_get_view_angle(view_camera[0]);
 

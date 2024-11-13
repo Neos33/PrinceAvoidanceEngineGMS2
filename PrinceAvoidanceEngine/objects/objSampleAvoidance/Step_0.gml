@@ -8,7 +8,7 @@ t++;
 t_music=t;
 //Anti-desync taken from Shift Engine.
 
-if(t > 0){
+if(t > 0 and audio_is_playing(global.current_music)){
     var music_t = audio_sound_get_track_position(global.current_music) * 50;
     if(abs(t_music - music_t) > 5){
         audio_sound_set_track_position(global.current_music,t_music / 50);
@@ -161,8 +161,8 @@ switch(attackNames[|attack]){ //Main attack loop
             //var twirlShader=shader_push(shTwirl,0);
             
             //We can change the shader parameters using instance manipulation functions
-            instance_change_variable(godRaysShader,"intensity",0.5,100,ac_ease, "InOut");
-            instance_change_variable(hueShiftShader,"intensity",2*360.0,1000,ac_linear, 0);
+            instance_change_variable(godRaysShader,"intensity",0.5,100,ac_ease, EASE_INOUT);
+            instance_change_variable(hueShiftShader,"intensity",2*360.0,1000,ac_linear, EASE_IN);
             //instance_change_variable(twirlShader,"intensity",1,1000,tween_linear);
         }
         with(objAvoidanceBullet){
@@ -199,8 +199,8 @@ switch(attackNames[|attack]){ //Main attack loop
             heart.z=-100;
             heart.killer=true;
             heart.dTheta=0.25;
-            instance_scale(heart,200,400,ac_linear, 0);
-            instance_morph(heart,shaper_heart,5,400,ac_ease, "InOut");
+            instance_scale(heart,200,400,ac_linear,0);
+            instance_morph(heart,shaper_heart,5,400,ac_ease, EASE_INOUT);
         }
         break;
     }
