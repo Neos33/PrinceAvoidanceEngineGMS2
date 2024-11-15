@@ -32,6 +32,16 @@ global.unstuckY=608-64;
 unstuckBoundary=32;
 
 
+combo_breaked = true;
+
+// Animation
+combo_multiplier_offset_x = 0;
+combo_multiplier_offset_x_const = 12;
+combo_multiplier_color = [c_white, c_red];
+combo_multiplier_current_color = 0;
+combo_multiplier_factor = 0;
+combo_multiplier_count = 0;
+
 
 //ranks
 rankText[0]="";
@@ -68,7 +78,7 @@ scorebar_seq=seeded_sequence_init(2000,2);
 
 #endregion
 
-#region ///initialize the surface for the scorebar
+#region initialize the surface for the scorebar
 
 
 surf=surface_create(800,608);

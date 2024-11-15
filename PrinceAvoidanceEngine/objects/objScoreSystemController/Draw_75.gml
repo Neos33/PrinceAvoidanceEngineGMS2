@@ -3,10 +3,14 @@
 if(global.ance&&global.scoreVisible&&instance_exists(objAvoidanceMarker)){
     draw_set_font(fScore);
     draw_set_align(fa_right,fa_bottom);
-    draw_set_colour(c_white);
+    
+	draw_set_color(combo_multiplier_current_color);
+    draw_text_outline(800-32+combo_multiplier_offset_x,608-64,"x"+string(global.comboMultiplier),c_black);
+	
+	draw_set_colour(c_white);
     
     draw_text_outline(800-32,608-32,string(floor(global.hitScore)),c_black);
-    draw_text_outline(800-32,608-64,"x"+string(global.comboMultiplier),c_black);
+    //draw_text_outline(800-32,608-64,"x"+string(global.comboMultiplier),c_black);
     
     //if(global.freezeCombo){
         //draw_set_align(1,0);

@@ -129,7 +129,7 @@ if(!instance_exists(objPlayer)) exit;
 switch(attackNames[|attack]){ //Main attack loop
     case "ATTACK1":
     {   
-        if(on_beat(ct,BT)){ // An example of a simple attack that spawns a flower every beat
+		if(on_beat(ct,BT)){ // An example of a simple attack that spawns a flower every beat
            spawn_shape(400,304, random(360),6,20,6,objAvoidanceBullet,"flower",shaper_flower);
         }
         if(ct==1) rngController = rng_controller_create(4);

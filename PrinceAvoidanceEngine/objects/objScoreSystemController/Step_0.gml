@@ -1,12 +1,30 @@
 /// @desc
 
-#region ///Increment combo
-if(!global.freezeCombo&&!global.freezeComboTimeline){
-    if(comboTimer>0) comboTimer-=global.comboDropRate;
-    else{
+#region Increment combo
+if(!global.freezeCombo && !global.freezeComboTimeline)
+{
+    if(comboTimer > 0) 
+	{
+		comboTimer -= global.comboDropRate;
+		combo_breaked = false;
+	}
+    else
+	{
         global.combo = 0;
         comboTimer = 0;
         if(global.comboInit) global.fullCombo=false //break combo/fullcombo
+	
+		if !combo_breaked
+		{
+			// Play sfx if we are in an avoidance room
+			if instance_exists(objAvoidanceMarker)
+			{
+				//print("You lose your combo");
+				instance_change_variable(id, "combo_multiplier_factor", 1, 30, ac_circ_bf, EASE_OUT);
+				audio_play_sound(global.sfxLoseCombo, 0, false);
+			}
+			combo_breaked = true;
+		}
     }
 }
 
@@ -19,7 +37,7 @@ if(global.combo>global.maxCombo) {
 
 #endregion
 
-#region ///Display the scorebar using the particles
+#region Display the scorebar using the particles
 
 if(global.scoreVisible&&instance_exists(objAvoidanceMarker)){
     repeat(floor(20*comboTimer)){
@@ -31,7 +49,7 @@ if(global.scoreVisible&&instance_exists(objAvoidanceMarker)){
 
 #endregion
 
-#region ///Ranks
+#region Ranks
 var _oldRank=global.currentRank;
 for(var i=0;i<4;i++){
     if(global.hitScore>global.rankScore[i]) global.currentRank=i;
@@ -47,3 +65,11 @@ if(global.currentRank>_oldRank&&instance_exists(objPlayer)){
         str=other.rankText[global.currentRank]+ " RANK ACHIEVED! !";
     }
 }
+
+#endregion
+
+
+combo_multiplier_offset_x = sin(combo_multiplier_count) * combo_multiplier_offset_x_const * combo_multiplier_factor;
+combo_multiplier_current_color = merge_color(combo_multiplier_color[0], combo_multiplier_color[1], combo_multiplier_factor);
+
+combo_multiplier_count++;

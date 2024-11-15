@@ -27,6 +27,8 @@ global.ance = true;
 
 global.hitSoundType = sndBossHit;
 
+global.sfxLoseCombo = sndComboLose; // Added | Check objScoreSystemController 
+
 
 enum Ranks{
     NONE=0,
