@@ -26,7 +26,39 @@ if(attack<numTimings-1){
 #region Debug timeline and keys
 
 if(global.debug_enable){
-    if(keyboard_check_pressed(vk_space)){ //Set a debug snap on SPACE
+    function avoidance_jump_to_timing(timing, opt_cleanup = true)
+	{
+		/*
+		    * Sets the avoidance timer to a value specified by **timing**.
+		    * If **opt_cleanup** is set to true, also cleans up all of the avoidance entities such as bullets.
+		    * 
+		    * @param {int} timing - The timing to jump to.
+		    * @param {boolean} opt_cleanup - Whether to clean up the avoidance entities.
+		    * 
+		*/
+
+		audio_sound_set_track_position(global.current_music, timing / 50);
+		t = floor(timing);
+		var full_list = ds_list_size(attackTimings) - 1; // We skip the last state which is just room_goto and clean up
+		for (var i = 0; i < full_list; i++)
+		{
+		    if (timing * 50 > attackTimings[|i])
+			{
+		        attack = i;
+		        break;       
+		    }
+		}
+		if (opt_cleanup)
+		{
+		    with (objAvoidanceEntity) 
+			{
+		        if (!child)
+					instance_destroy();
+		    }
+		}
+	}
+	
+	if(keyboard_check_pressed(vk_space)){ //Set a debug snap on SPACE
         global.debugSnaps[global.numDebugSnaps]=t;
         global.numDebugSnaps++;
         show_debug_message(string(t));
