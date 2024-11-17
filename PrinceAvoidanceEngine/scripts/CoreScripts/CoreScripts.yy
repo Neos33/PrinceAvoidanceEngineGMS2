@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"AnceScripts",
+  "%Name":"CoreScripts",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"AnceScripts",
+  "name":"CoreScripts",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

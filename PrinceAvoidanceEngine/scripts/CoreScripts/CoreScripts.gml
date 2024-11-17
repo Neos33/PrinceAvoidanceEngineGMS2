@@ -16,7 +16,7 @@ global.iframes = 0;
 global.iframes_max = 50;
 
 // Ance mode
-global.ance = true;
+global.ance = false;
 
 
 //create the score and seed controllers
@@ -222,14 +222,18 @@ function endurance_player_kill()
 	    //with(objBLCSystemController) hitTimer=1;
 	    global.hp--;
 	    global.hp = max(global.hp,0);
+		
 	    if(global.hp>0)
 	    {
 	        global.iframes = global.iframes_max;
 	        audio_play_sound(sndBossHit, 0, false);
+			print("Got hit")
 	        exit;
 	    }
-    
-	    global.deathSound = audio_play_sound(sndDeath, 0, false);
+		print("Player is dead?")
+	    //global.deathSound = audio_play_sound(sndDeath, 0, false);
+		//audio_play_sound(sndDeath, 0, false);
+		kill_player();
 		/*
 	    if (!global.muteMusic)  //play death music
 	    {
@@ -262,13 +266,13 @@ function endurance_player_kill()
 	        instance_destroy();
 	    }
     
-	    instance_create_depth(0, 0, 0, objGameOver);
+	    //instance_create_depth(0, 0, 0, objGameOver);
     
-	    if (global.game_started)
+	    /*if (global.game_started)
 	    {
 	        savedata_set_persistent("death", savedata_get("death") + 1);
 	        savedata_save(false); //save death/time
-	    }
+	    }*/
 	}
 }
 

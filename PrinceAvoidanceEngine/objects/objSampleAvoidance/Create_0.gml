@@ -111,6 +111,7 @@ global.noDeath=false;
 infinite_jump=false; 
 global.grav=1;
 
+global.iframes = 0; // HP mode
 
 highlight=-1;
 #endregion

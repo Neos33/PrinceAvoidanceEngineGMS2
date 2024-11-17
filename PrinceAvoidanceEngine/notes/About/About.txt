@@ -1,0 +1,8 @@
+A port of Princeoflight avoidance engine into GMS2 - https://github.com/princeoflight612/Princeoflight-Avoidance-Engine
+
+Important:
+
+Check "CoreScripts" to switch the gameplay mode between Avoidance or Ance.
+Duplicate object "objSampleAvoidance" and the room "rBoss" and you're ready to go.
+
+Make sure to place the object "objAvoidanceResetStats" (located in Avoidance folder) in the room before the boss. That object resets your stats (Score for Ance & HP for Avoidance).

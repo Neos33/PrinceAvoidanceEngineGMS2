@@ -265,4 +265,5 @@ switch(attackNames[|attack]){ //Main attack loop
 if infinite_jump
 	reset_jumps();
 	
+global.iframes = max(global.iframes - 1, 0);
 #endregion

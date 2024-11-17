@@ -19,8 +19,9 @@ function reset_boss_stats(value)
 	
 	// Avoidance 
 	
-	// Reset HP
+	// Reset HP & iframes
 	global.hp = global.hp_max;
+	//global.iframes = 0;
 	
 	print("Boss stats reseted")
 }

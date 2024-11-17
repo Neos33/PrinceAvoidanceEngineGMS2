@@ -11,7 +11,8 @@ if(killer){
                 ance_active=0;
                 ance_alpha=0.5;
             }
-            endurance_player_kill();
+			
+			endurance_player_kill();
         }
     }
 }
