@@ -16,7 +16,7 @@ global.iframes = 0;
 global.iframes_max = 50;
 
 // Ance mode
-global.ance = false;
+global.ance = true;
 
 
 //create the score and seed controllers
