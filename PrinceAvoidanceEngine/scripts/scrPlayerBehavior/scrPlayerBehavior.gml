@@ -163,7 +163,7 @@ function kill_player() {
 	            instance_destroy();
 	        }
             
-			instance_create_layer(0, 0, "Instances", objGameOver);
+			instance_create_layer(0, 0, "Controllers", objGameOver);
 	        global.deaths++;
 			audio_play_sound(sndDeath, 0, false);
 			

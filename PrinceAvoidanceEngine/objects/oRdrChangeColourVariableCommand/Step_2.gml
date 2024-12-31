@@ -9,11 +9,6 @@ if curve_position <= end_position
 	var _struct = animcurve_get(curve_tween);
 	var _channel = animcurve_get_channel(_struct, curve_mode);
 	var _value = animcurve_channel_evaluate(_channel, curve_position);
-
-
-	// Magic
-	var blendFactor = StartVar + _value * targetX;
-	
 	
 	
 	// Increment
@@ -22,7 +17,7 @@ if curve_position <= end_position
 		
 		
 	// Apply changes to the onwer instance
-	variable_instance_set(TargetId, varName, merge_colour(StartVar, targetX, blendFactor));
+	variable_instance_set(TargetId, varName, merge_colour(StartVar, targetX, _value));
 }
 else
 	instance_destroy();

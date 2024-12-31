@@ -9,11 +9,6 @@ if curve_position <= end_position
 	var _struct = animcurve_get(curve_tween);
 	var _channel = animcurve_get_channel(_struct, curve_mode);
 	var _value = animcurve_channel_evaluate(_channel, curve_position);
-
-
-	// Magic
-	var blendFactor = StartColor + _value * EndColor;
-	
 	
 	
 	// Increment
@@ -22,7 +17,7 @@ if curve_position <= end_position
 		
 		
 	// Apply changes to the onwer instance
-	TargetId.image_blend = merge_colour( StartColor, EndColor, blendFactor );
+	TargetId.image_blend = merge_colour( StartColor, EndColor, _value );
 }
 else
 	instance_destroy();
