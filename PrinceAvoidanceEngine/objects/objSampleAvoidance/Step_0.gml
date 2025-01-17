@@ -241,12 +241,21 @@ switch(attackNames[|attack]){ //Main attack loop
     {
         if(ct==1){
         
-            if (bossItem != -1) global.items.bosses[bossItem] = true;
-            if (secretItem != -1) global.items.secrets[secretItem] = true;
-            if(autoWarp){
-                with(objPlayer) instance_destroy();
-                room_goto(roomTo);
-            }
+            // If we are in practice mode, we show a message instead of going at the next room
+			if global.practice_use
+			{
+				instance_create_depth(0, 0, 0, objPracticeEndMessage);
+			}
+			else
+			{
+				// Legit clear
+				if (bossItem != -1) global.items.bosses[bossItem] = true;
+	            if (secretItem != -1) global.items.secrets[secretItem] = true;
+	            if(autoWarp){
+	                with(objPlayer) instance_destroy();
+	                room_goto(roomTo);
+	            }
+			}
         }
         break;
     }

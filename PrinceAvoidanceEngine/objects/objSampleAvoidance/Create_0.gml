@@ -22,18 +22,6 @@ attackNames=ds_list_create();
 attackTimings=ds_list_create();
 
 
-function avoidance_add_attack(name, time)
-{
-	/**
-	    * Adds a timing for an avoidance attack named ``name`` that starts at time ``time``.
-	    * @param {string} name - The name of the attack.
-	    * @param {integer} time - The time at which the attack starts, in frames.
-	*/
-
-	ds_list_add(attackNames, name);
-	ds_list_add(attackTimings, time);
-	numTimings++;
-}
 
 avoidance_add_attack("ATTACK1",0);
 avoidance_add_attack("ATTACK2",500);
@@ -86,8 +74,8 @@ avoidance_add_debug_key(ord("1"), 500);
 attack=0;
 
 
-t=0;
-t_music=0;
+t = global.practice_starts;
+t_music = global.practice_starts;
 finish=false;
 RealStep=0;
 debug_timeline_clicked = false;

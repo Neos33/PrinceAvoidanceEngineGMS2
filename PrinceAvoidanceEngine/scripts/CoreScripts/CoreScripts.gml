@@ -100,6 +100,14 @@ global.debugSnaps[0]=0;
 global.numDebugSnaps=0;
 
 
+// Practice mode
+global.practice_enabled = true;
+global.practice_use = false; // It won't work if *global.practice_enabled* is disabled.
+global.practice_segment = 0;
+global.practice_starts = 0;
+
+
+
 function ance_create_controllers()
 {
 	instance_create_depth(0, 0, 0, objScoreSystemController);
